@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCPPlayground", "src\MCPPlayground\MCPPlayground.csproj", "{CB99F5B9-8519-888F-4C8D-C22249C36EF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MCPPlayground.Tests", "tests\MCPPlayground.Tests\MCPPlayground.Tests.csproj", "{CF86C5B8-C880-4E04-B6A1-619FDEC6F033}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB99F5B9-8519-888F-4C8D-C22249C36EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB99F5B9-8519-888F-4C8D-C22249C36EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB99F5B9-8519-888F-4C8D-C22249C36EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB99F5B9-8519-888F-4C8D-C22249C36EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF86C5B8-C880-4E04-B6A1-619FDEC6F033}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF86C5B8-C880-4E04-B6A1-619FDEC6F033}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF86C5B8-C880-4E04-B6A1-619FDEC6F033}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF86C5B8-C880-4E04-B6A1-619FDEC6F033}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {048FA86E-9BA4-448A-BEEC-3E383EEC1FEA}
+	EndGlobalSection
+EndGlobal
