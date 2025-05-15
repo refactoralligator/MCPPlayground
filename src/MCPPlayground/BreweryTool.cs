@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using MCPPlayground.Models.Filters;
 using ModelContextProtocol.Server;
 
 namespace MCPPlayground;
@@ -26,6 +27,14 @@ public static class BreweryTool
         string city, int numberOfBreweries = 3)
     {
         var breweries = await breweriesService.GetBreweriesInCityAsync(city, numberOfBreweries);
+        return JsonSerializer.Serialize(breweries);
+    }
+
+    [McpServerTool, Description("Get a number of breweries, based on properties")]
+    public static async Task<string> GetBreweriesWithFilter(BreweriesService breweriesService,
+        BreweryFilter filter)
+    {
+        var breweries = await breweriesService.GetBreweriesWithFilterAsync(filter);
         return JsonSerializer.Serialize(breweries);
     }
 }
