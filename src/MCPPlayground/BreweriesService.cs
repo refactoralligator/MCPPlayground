@@ -11,9 +11,22 @@ public class BreweriesService
         httpClient = httpClientFactory.CreateClient();
     }
 
-    public async Task<List<Brewery>> GetBreweriesAsync()
+    public async Task<List<Brewery>> GetBreweriesAsync(int numberOfBreweries)
     {
-        var response = await httpClient.GetAsync("https://api.openbrewerydb.org/v1/breweries?per_page=3");
+        var response = await httpClient.GetAsync($"https://api.openbrewerydb.org/v1/breweries?per_page={numberOfBreweries}");
+        if (!response.IsSuccessStatusCode)
+        {
+            throw new Exception("Failed to fetch breweries");
+        }
+
+        List<Brewery> breweries = await response.Content.ReadFromJsonAsync(BreweryContext.Default.ListBrewery) ?? [];
+
+        return breweries;
+    }
+
+    public async Task<List<Brewery>> GetBreweriesInCityAsync(string city, int numberOfBreweries)
+    {
+        var response = await httpClient.GetAsync($"https://api.openbrewerydb.org/v1/breweries?by_city={city}&per_page={numberOfBreweries}");
         if (!response.IsSuccessStatusCode)
         {
             throw new Exception("Failed to fetch breweries");
