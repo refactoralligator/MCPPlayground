@@ -16,6 +16,4 @@ public class BreweryFilter
     public string? PostalCode { get; set; }
     [QueryName("by_country")]
     public string? Country { get; set; }
-    //public double? Longitude { get; set; } //todo by_dist GET https://api.openbrewerydb.org/v1/breweries?by_dist=32.88313237,-117.1649842&per_page=3
-    //public double? Latitude { get; set; } //todo
 }

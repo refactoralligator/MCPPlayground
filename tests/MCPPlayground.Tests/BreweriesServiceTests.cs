@@ -1,7 +1,4 @@
-﻿using System.Security.Authentication.ExtendedProtection;
-using System.Net.Http;
-using Microsoft.Extensions.DependencyInjection;
-using MCPPlayground.Models.Filters;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace MCPPlayground.Tests;
 

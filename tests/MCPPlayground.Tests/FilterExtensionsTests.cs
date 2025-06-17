@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MCPPlayground.Extensions;
+﻿using MCPPlayground.Extensions;
 using MCPPlayground.Models.Filters;
 
 namespace MCPPlayground.Tests;
@@ -12,6 +7,7 @@ namespace MCPPlayground.Tests;
 public class FilterExtensionsTests
 {
     [TestMethod]
+    [TestCategory("Unit")]
     public void FilterExtensions_ToQueryString_ReturnsCorrectQueryString()
     {
         // Arrange
